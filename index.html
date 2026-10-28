@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mohamed Salah | Portfolio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- apply the saved theme before the page shows (no flash) -->
+        <script>
+            try {
+                var saved = localStorage.getItem("theme");
+                if (saved) document.documentElement.className = saved;
+            } catch (e) {}
+        </script>
+    </head>
+    <body class="loading">
+        <!-- intro screen -->
+        <div class="preloader" id="preloader" aria-hidden="true">
+            <div class="preloader-content">
+                <span class="preloader-logo">MS</span>
+                <p class="preloader-title">My Portfolio</p>
+                <p class="preloader-sub">Mohamed Salah &middot; Front-End
+                    Developer</p>
+                <span class="preloader-line"><span
+                        class="preloader-bar"></span></span>
+            </div>
+        </div>
+        <!-- Header -->
+        <header class="header">
+            <nav class="header-container">
+
+                <a href="#home" class="logo">
+                    <span class="logo-circle">MS</span>
+                    <span class="logo-text">Portfolio</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="menu-cta"><a href="#contact">Hire Me</a></li>
+                </ul>
+
+                <div class="nav-right">
+                    <div class="rope-area" id="ropeArea">
+                        <button class="rope-button" id="ropeButton"
+                            type="button"
+                            aria-label="Switch between dark and light mode"></button>
+                    </div>
+                    <a href="#contact" class="hire-btn">Hire Me</a>
+                    <button class="menu-toggle" id="menuToggle" type="button"
+                        aria-label="Open menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <!-- or: <a href="cv.pdf" download class="hire-btn">Download CV</a> -->
+                </div>
+
+            </nav>
+        </header>
+
+        <canvas id="ropeCanvas" class="rope-canvas"></canvas>
+        <div class="rope-handle" id="ropeHandle"></div>
+
+        <section class="section Home" id="home">
+
+            <!-- reveal-left: comes in from the left -->
+            <div class="left-side reveal-left">
+                <div class="available-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for freelance work</span>
+                </div>
+                <p class="hi">Hi!, I'm</p>
+                <h1>Mohamed Salah</h1>
+                <p class="hero-subtitle">Front &ndash; End Developer</p>
+                <p class="hero-description">"Crafting modern digital
+                    experiences that bridge the gap between elegant design and
+                    smooth, interactive front-end functionality."</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="hire-btn">View Work</a>
+                    <a href="#contact" class="nav-links-a">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/MohamedSalah-Dev"
+                        class="social-icon" target="_blank" rel="noopener"
+                        aria-label="GitHub">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/mohamed-sallahh"
+                        class="social-icon" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+
+                    <a href="mailto:mohamed.salah2000612@gmail.com"
+                        class="social-icon"
+                        aria-label="Email">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                    <span class="social-divider"></span>
+
+                    <a href="cv.pdf" download="Mohamed-Salah-CV.pdf"
+                        class="cv-link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- reveal-right + delay-1: comes in from the right, a bit later -->
+            <div class="right-side reveal-right delay-1">
+                <div class="hero-image-container">
+                    <img src="./images/Me white.jpg" alt="Hero Image"
+                        class="hero-image">
+
+                    <span class="tech-badge badge-html">HTML</span>
+                    <span
+                        class="tech-badge tech-badge-silver badge-css">CSS</span>
+                    <span class="tech-badge badge-js">JavaScript</span>
+                    <span
+                        class="tech-badge tech-badge-silver badge-react">React</span>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down" aria-label="Scroll down">
+                <span class="scroll-text">Scroll</span>
+                <span class="scroll-line"></span>
+            </a>
+
+        </section>
+
+        <section class="section" id="about">
+
+            <div class="about-header reveal">
+                <p class="section-label">About Me</p>
+                <h2 class="section-title">Turning ideas into elegant,
+                    responsive interfaces</h2>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text reveal-left">
+                    <p>
+                        I'm a Computer Science student and Front-End Developer
+                        who loves turning complex ideas into clean, elegant, and
+                        responsive web experiences. I enjoy the space where
+                        refined design meets functional code — where every
+                        detail, from layout precision to state management,
+                        matters.
+                    </p>
+                    <p>
+                        I build using modern JavaScript (ES6+), React, HTML5,
+                        and CSS3, focusing on writing clean, component-driven,
+                        and maintainable code. I'm always looking for freelance
+                        projects and front-end opportunities to bring modern
+                        brand visions to life.
+                    </p>
+                </div>
+
+                <ul class="about-info reveal-right delay-1">
+                    <li>
+                        <span class="info-label">Education</span>
+                        <span class="info-value">Computer Science, Zagazig
+                            University</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Focus</span>
+                        <span class="info-value">Front-End
+                            Development</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Tools</span>
+                        <span class="info-value">HTML, CSS, JavaScript, React
+                            ,Git
+                            &amp; GitHub</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Background</span>
+                        <span class="info-value">C++, Data Structures,
+                            Algorithms , Problem Solving</span>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+        <section class="section skills" id="skills">
+
+            <div class="skills-text reveal-left">
+                <p class="section-label">Skills</p>
+                <h2 class="section-title">The stack I build with</h2>
+                <p class="skills-intro">
+                    Every project starts with solid structure, gets its
+                    personality from
+                    styling, and comes alive with interaction.
+                </p>
+
+                <ul class="about-info">
+                    <li>
+                        <span class="info-label">Front-End</span>
+                        <span class="info-value">HTML5, CSS3, JavaScript,
+                            React</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Tools</span>
+                        <span class="info-value">Git, GitHub</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Also familiar with</span>
+                        <span class="info-value">C++ (OOP), Data Structures,
+                            Bootstrap</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skills-visual reveal-right delay-1">
+                <svg viewBox="-30 60 420 500" role="img"
+                    aria-label="Stack of my main skills">
+
+                    <!-- floor -->
+                    <polygon class="floor-shape"
+                        points="180,346 380,446 180,546 -20,446" />
+                    <line class="floor-grid" x1="30" y1="421" x2="230"
+                        y2="521" />
+                    <line class="floor-grid" x1="80" y1="396" x2="280"
+                        y2="496" />
+                    <line class="floor-grid" x1="130" y1="371" x2="330"
+                        y2="471" />
+                    <line class="floor-grid" x1="30" y1="471" x2="230"
+                        y2="371" />
+                    <line class="floor-grid" x1="80" y1="496" x2="280"
+                        y2="396" />
+                    <line class="floor-grid" x1="130" y1="521" x2="330"
+                        y2="421" />
+
+                    <!-- layer 1 (bottom): Git & GitHub -->
+                    <g transform="translate(180,410)">
+                        <g class="layer layer-black">
+                            <polygon class="face-top"
+                                points="0,-70 140,0 0,70 -140,0" />
+                            <polygon class="face-left"
+                                points="-140,0 0,70 0,106 -140,36" />
+                            <polygon class="face-right"
+                                points="0,70 140,0 140,36 0,106" />
+                            <text class="layer-name name-small"
+                                transform="matrix(1,-0.5,0,1,0,70)" x="12"
+                                y="24">Git &amp; GitHub</text>
+                            <text class="layer-note"
+                                transform="matrix(1,0.5,0,1,-140,0)" x="12"
+                                y="22">WORKFLOW</text>
+                            <g class="layer-logo"
+                                transform="matrix(1,0.5,0,1,-140,0) translate(118,18) scale(1.15)">
+                                <rect x="-8" y="-8" width="16" height="16"
+                                    rx="2.5" transform="rotate(45)" />
+                                <path d="M0 -4 V4 M0 1 Q0 -2 4 -2" />
+                                <circle class="logo-dot" cx="0" cy="-4"
+                                    r="1.4" />
+                                <circle class="logo-dot" cx="0" cy="4"
+                                    r="1.4" />
+                                <circle class="logo-dot" cx="4" cy="-2"
+                                    r="1.4" />
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- layer 2: HTML5 -->
+                    <g transform="translate(180,350)">
+                        <g class="float float-c">
+                            <g class="layer layer-silver">
+                                <polygon class="face-top"
+                                    points="0,-70 140,0 0,70 -140,0" />
+                                <polygon class="face-left"
+                                    points="-140,0 0,70 0,114 -140,44" />
+                                <polygon class="face-right"
+                                    points="0,70 140,0 140,44 0,114" />
+                                <text class="layer-name"
+                                    transform="matrix(1,-0.5,0,1,0,70)" x="12"
+                                    y="29">HTML5</text>
+                                <text class="layer-note"
+                                    transform="matrix(1,0.5,0,1,-140,0)" x="12"
+                                    y="26">STRUCTURE</text>
+                                <g class="layer-logo"
+                                    transform="matrix(1,0.5,0,1,-140,0) translate(118,22) scale(1.15)">
+                                    <path
+                                        d="M-9 -10 H9 L7.5 8.5 L0 11 L-7.5 8.5 Z" />
+                                    <text x="0" y="4"
+                                        text-anchor="middle">5</text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- layer 3: CSS3 -->
+                    <g transform="translate(180,290)">
+                        <g class="float float-b">
+                            <g class="layer layer-black">
+                                <polygon class="face-top"
+                                    points="0,-70 140,0 0,70 -140,0" />
+                                <polygon class="face-left"
+                                    points="-140,0 0,70 0,114 -140,44" />
+                                <polygon class="face-right"
+                                    points="0,70 140,0 140,44 0,114" />
+                                <text class="layer-name"
+                                    transform="matrix(1,-0.5,0,1,0,70)" x="12"
+                                    y="29">CSS3</text>
+                                <text class="layer-note"
+                                    transform="matrix(1,0.5,0,1,-140,0)" x="12"
+                                    y="26">STYLE</text>
+                                <g class="layer-logo"
+                                    transform="matrix(1,0.5,0,1,-140,0) translate(118,22) scale(1.15)">
+                                    <path
+                                        d="M-9 -10 H9 L7.5 8.5 L0 11 L-7.5 8.5 Z" />
+                                    <text x="0" y="4"
+                                        text-anchor="middle">3</text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- layer 4 (top): JavaScript -->
+                    <g transform="translate(180,210)">
+                        <g class="float float-a">
+                            <g class="layer layer-gold">
+                                <polygon class="face-top"
+                                    points="0,-70 140,0 0,70 -140,0" />
+                                <polygon class="face-left"
+                                    points="-140,0 0,70 0,134 -140,64" />
+                                <polygon class="face-right"
+                                    points="0,70 140,0 140,64 0,134" />
+                                <text class="layer-name name-large"
+                                    transform="matrix(1,-0.5,0,1,0,70)" x="12"
+                                    y="41">JavaScript</text>
+                                <text class="layer-note"
+                                    transform="matrix(1,0.5,0,1,-140,0)" x="12"
+                                    y="38">LOGIC</text>
+                                <g class="layer-logo"
+                                    transform="matrix(1,0.5,0,1,-140,0) translate(118,32) scale(1.3)">
+                                    <rect x="-10" y="-10" width="20" height="20"
+                                        rx="2" />
+                                    <text x="8" y="8"
+                                        text-anchor="end">JS</text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <!-- layer 5 (top): React -->
+                    <g transform="translate(180,150)">
+                        <g class="float float-d">
+                            <g class="layer layer-silver">
+                                <polygon class="face-top"
+                                    points="0,-70 140,0 0,70 -140,0" />
+                                <polygon class="face-left"
+                                    points="-140,0 0,70 0,114 -140,44" />
+                                <polygon class="face-right"
+                                    points="0,70 140,0 140,44 0,114" />
+                                <text class="layer-name"
+                                    transform="matrix(1,-0.5,0,1,0,70)" x="12"
+                                    y="29">React</text>
+                                <text class="layer-note"
+                                    transform="matrix(1,0.5,0,1,-140,0)" x="12"
+                                    y="26">COMPONENTS</text>
+                                <g class="layer-logo"
+                                    transform="matrix(1,0.5,0,1,-140,0) translate(118,22) scale(1.15)">
+                                    <ellipse rx="10" ry="4" />
+                                    <ellipse rx="10" ry="4"
+                                        transform="rotate(60)" />
+                                    <ellipse rx="10" ry="4"
+                                        transform="rotate(120)" />
+                                    <circle class="logo-dot" r="1.8" />
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+
+                </svg>
+            </div>
+
+        </section>
+        <section class="section services" id="services">
+
+            <div class="services-header reveal">
+                <p class="section-label">Services</p>
+                <h2 class="section-title">What I can build for you</h2>
+            </div>
+
+            <ul class="service-list">
+
+                <li class="reveal">
+                    <div class="service-row">
+                        <span class="service-number">01</span>
+                        <h3 class="service-title">Landing Pages</h3>
+                        <p class="service-text">Fast, focused pages that present
+                            your brand or product clearly and turn visitors into
+                            customers.</p>
+                    </div>
+                </li>
+
+                <li class="reveal">
+                    <div class="service-row">
+                        <span class="service-number">02</span>
+                        <h3 class="service-title">React & Web Applications</h3>
+                        <p class="service-text">Interactive, component-based web
+                            applications built with React, focusing on state
+                            management, smooth transitions, and seamless dynamic
+                            UI logic.</p>
+                    </div>
+                </li>
+
+                <li class="reveal">
+                    <div class="service-row">
+                        <span class="service-number">03</span>
+                        <h3 class="service-title">AuraHealth</h3>
+                        <p class="service-text">Minimalist, soothing design with
+                            smart mood-tracking, interactive mindfulness tools,
+                            and a seamless, calming user experience.</p>
+                    </div>
+                </li>
+
+                <li class="reveal">
+                    <div class="service-row">
+                        <span class="service-number">04</span>
+                        <h3 class="service-title">Figma / UI to Clean Code</h3>
+                        <p class="service-text">I turn your design into a
+                            pixel-perfect, responsive and fast website that
+                            works on every screen.</p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="services-cta reveal">
+                <p>Have a project in mind?</p>
+                <a href="#contact" class="hire-btn">Let's talk</a>
+            </div>
+
+        </section>
+        <section class="projects-intro" id="projects">
+            <p class="section-label reveal">Selected Work</p>
+            <h2 class="projects-heading reveal">Projects</h2>
+        </section>
+        <div class="projects" id="projects">
+            <div class="projects-sticky">
+
+                <!-- the 3D scene: the camera travels through it while you scroll -->
+                <div class="projects-world">
+
+                    <!-- big title (the journey starts here) -->
+                    <div class="bigword-holder">
+                        <p class="bigword-label">Selected Work</p>
+                        <h2 class="bigword">PROJECTS</h2>
+                        <p class="bigword-sub">Things I've built, one step at a
+                            time.</p>
+                    </div>
+                    <!-- Floating frames. data-mx / data-my = position on a phone, hide-mobile = hidden on a phone -->
+                    <div class="float-frame frame-image" data-x="-520"
+                        data-y="-150" data-z="-900" data-mx="-95"
+                        data-my="-190">
+                        <img src="images/roast-and-co2.png" alt>
+                        <span class="frame-caption">Design</span>
+                    </div>
+                    <div class="float-frame frame-image" data-x="520"
+                        data-y="150" data-z="-900" data-mx="95" data-my="170">
+                        <img src="images/roast-and-co3.png" alt>
+                        <span class="frame-caption">Design</span>
+                    </div>
+                    <div class="float-frame frame-image hide-mobile"
+                        data-x="420" data-y="-280" data-z="-900">
+                        <img src="images/roast-and-co4.png" alt>
+                        <span class="frame-caption">Design</span>
+                    </div>
+                    <div class="float-frame frame-image hide-mobile"
+                        data-x="-420" data-y="350" data-z="-900">
+                        <img src="images/roast-and-co5.png" alt>
+                        <span class="frame-caption">Design</span>
+                    </div>
+
+                    <div class="float-frame frame-text" data-x="480"
+                        data-y="170" data-z="-2100" data-mx="0" data-my="-250">
+                        <p>Clean code,<br>elegant interfaces.</p>
+                    </div>
+
+                    <div class="float-frame frame-image" data-x="-500"
+                        data-y="160" data-z="-2400" data-mx="-95" data-my="190">
+                        <img src="images/card-planing-m.png" alt>
+                        <span class="frame-caption">Detail</span>
+                    </div>
+                    <div class="float-frame frame-image hide-mobile"
+                        data-x="700" data-y="-160" data-z="-2500">
+                        <img src="images/planing-force1.png" alt>
+                        <span class="frame-caption">Detail</span>
+                    </div>
+
+                    <div class="float-frame frame-image" data-x="-600"
+                        data-y="160" data-z="-3700" data-mx="-95" data-my="190">
+                        <img src="images/AuraHealth2.png" alt>
+                        <span class="frame-caption">Detail</span>
+                    </div>
+                    <div class="float-frame frame-image hide-mobile"
+                        data-x="-550" data-y="-300" data-z="-3800">
+                        <img src="images/AuraHealth3.png" alt>
+                        <span class="frame-caption">Detail</span>
+                    </div>
+                    <div class="float-frame frame-image" data-x="500"
+                        data-y="160" data-z="-3800" data-mx="95" data-my="-190">
+                        <img src="images/card-aura-m.png" alt>
+                        <span class="frame-caption">Detail</span>
+                    </div>
+                    <div class="float-frame frame-text frame-silver hide-mobile"
+                        data-x="500" data-y="-150" data-z="-3700">
+                        <p>Every detail<br>makes a difference.</p>
+                    </div>
+
+                    <div class="float-frame frame-image" data-x="-480"
+                        data-y="150" data-z="-5000" data-mx="-95" data-my="190">
+                        <img src="images/Portfolio2.png" alt>
+                        <span class="frame-caption">Portfolio</span>
+                    </div>
+                    <div class="float-frame frame-image hide-mobile"
+                        data-x="-350" data-y="-250" data-z="-5100">
+                        <img src="images/Portfolio3.png" alt>
+                        <span class="frame-caption">Portfolio</span>
+                    </div>
+                    <div class="float-frame frame-image" data-x="550"
+                        data-y="250" data-z="-5100" data-mx="95" data-my="-190">
+                        <img src="images/Portfolio1.png" alt>
+                        <span class="frame-caption">Portfolio</span>
+                    </div>
+                    <div class="float-frame frame-text frame-silver hide-mobile"
+                        data-x="500" data-y="-150" data-z="-5100">
+                        <p>In my own world<br>Where I'm just being myself.</p>
+                    </div>
+
+                    <!-- Card 1 -->
+                    <article class="project-card">
+                        <picture>
+                            <source media="(max-width: 700px)"
+                                srcset="images/card-roast-m.png">
+                            <img class="project-card-image"
+                                src="./images/roast-and-co.png"
+                                alt="Roast & Co. website">
+                        </picture>
+                        <div class="project-card-info">
+                            <span class="card-number">01</span>
+                            <h3 class="card-title">Roast &amp; Co.</h3>
+                            <p class="card-text">A specialty coffee roaster
+                                website built with a team as my front-end
+                                training final project.</p>
+                            <ul class="card-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="https://lnkd.in/p/eaygRxaA"
+                                    class="card-link" target="_blank"
+                                    rel="noopener">Live Demo &rarr;</a>
+                                <a
+                                    href="https://github.com/MohamedSalah-Dev/-Roast-Co"
+                                    class="card-link card-link-silver"
+                                    target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="project-card">
+                        <picture>
+                            <source media="(max-width: 700px)"
+                                srcset="images/card-planing-m.png">
+                            <img class="project-card-image"
+                                src="images/planing-force.png"
+                                alt="Planing Force landing page">
+                        </picture>
+                        <div class="project-card-info">
+                            <span class="card-number">02</span>
+                            <h3 class="card-title">Planing Force</h3>
+                            <p class="card-text">A landing page for an online
+                                learning academy with courses, live sessions and
+                                blogs.</p>
+                            <ul class="card-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="card-links">
+                                <a
+                                    href="https://mohamedsalah-dev.github.io/Planing-Force/"
+                                    class="card-link" target="_blank"
+                                    rel="noopener">Live Demo &rarr;</a>
+                                <a
+                                    href="https://github.com/MohamedSalah-Dev/Planing-Force"
+                                    class="card-link card-link-silver"
+                                    target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="project-card">
+                        <picture>
+                            <source media="(max-width: 700px)"
+                                srcset="images/card-aura-m.png">
+                            <img class="project-card-image"
+                                src="images/AuraHealth.png"
+                                alt="AuraHealth platform">
+                        </picture>
+                        <div class="project-card-info">
+                            <span class="card-number">03</span>
+                            <h3 class="card-title">AuraHealth</h3>
+                            <p class="card-text">A clean, responsive medical &
+                                wellness platform featuring intuitive healthcare
+                                service listings and a seamless appointment
+                                booking flow.</p>
+                            <ul class="card-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>PHP</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="https://lnkd.in/p/e5e-HqpS"
+                                    class="card-link" target="_blank"
+                                    rel="noopener">Live Demo &rarr;</a>
+                                <a
+                                    href="https://github.com/MohamedSalah-Dev/AuraHealth"
+                                    class="card-link card-link-silver"
+                                    target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 4: this portfolio -->
+                    <article class="project-card">
+                        <picture>
+                            <source media="(max-width: 700px)"
+                                srcset="images/card-portfolio-m.png">
+                            <img class="project-card-image"
+                                src="images/Portfolio.png"
+                                alt="My portfolio website">
+                        </picture>
+                        <div class="project-card-info">
+                            <span class="card-number">04</span>
+                            <h3 class="card-title">This Portfolio</h3>
+                            <p class="card-text">The site you're on: a black and
+                                gold portfolio with a ceiling-rope theme switch
+                                and a camera that travels through 3D space.</p>
+                            <ul class="card-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="#home" class="card-link">Back to top
+                                    &uarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- small text at the bottom -->
+                <div class="projects-hud">
+                    <span class="hud-counter">00 / 04 &middot; Selected
+                        Work</span>
+                    <span class="hud-hint">Scroll to travel</span>
+                    <span class="hud-line"><span class="hud-bar"></span></span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="projects-more">
+            <a href="https://github.com/MohamedSalah-Dev" class="hire-btn"
+                target="_blank" rel="noopener">More on GitHub</a>
+        </div>
+        <section class="section contact" id="contact">
+
+            <div class="contact-left reveal-left">
+                <p class="section-label">Contact</p>
+                <h2 class="section-title">Let's build something great
+                    together</h2>
+                <p class="contact-intro">
+                    Have a project in mind or just want to say hi? Send me a
+                    message
+                    and I'll get back to you as soon as I can.
+                </p>
+
+                <a href="mailto:mohamed.salah2000612@gmail.com"
+                    class="contact-email">mohamed.salah2000612@gmail.com</a>
+
+                <div class="contact-social">
+                    <a href="https://github.com/MohamedSalah-Dev"
+                        class="social-icon" target="_blank" rel="noopener"
+                        aria-label="GitHub">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohamed-sallahh"
+                        class="social-icon" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="mailto:mohamed.salah2000612@gmail.com"
+                        class="social-icon"
+                        aria-label="Email">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal-right delay-1" id="contactForm">
+
+                <input type="hidden" name="_subject"
+                    value="New message from my portfolio">
+
+                <div class="form-field">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" rows="4"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="hire-btn">Send Message</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
+
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Mohamed Salah</p>
+            <a href="#home">Back to top &uarr;</a>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="Me.js"></script>
+    </body>
+</html>
